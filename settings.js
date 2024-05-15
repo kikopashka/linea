@@ -3,10 +3,12 @@ export class general {
     static secret = ""
     static pass = ""
     static provider = "https://linea.decubate.com"
-    static lowAmount = 0.01
-    static highAmount = 0.01
-    static minDelay = 100
-    static maxDelay = 120
-    static minDeposit = 97
-    static maxDeposit = 98
+    static OKXandDeposit = false
+    static stargateFarm = true
+    static lowAmount = 0
+    static highAmount = 0
+    static minDelay = 0
+    static maxDelay = 10
+    static minDeposit = 0
+    static maxDeposit = 0
 }
