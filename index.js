@@ -180,7 +180,10 @@ export async function stakeStargate(key){
         )
         const approveTx = await wTokenContract.connect(wallet).approve(
             stargateContract.target,
-            balance
+            balance,
+            {
+                gasLimit: gasEstimateApprove * 130n / 100n
+            }
         )
         await delayTx(30,30)
         await approveTx.wait()
@@ -197,7 +200,7 @@ export async function stakeStargate(key){
         balance,
             {
                 gasPrice: gasPrice * 103n / 100n,
-                gasLimit: txEstimate * 105n / 100n
+                gasLimit: txEstimate * 130n / 100n
             })
     await tx.wait()
 
